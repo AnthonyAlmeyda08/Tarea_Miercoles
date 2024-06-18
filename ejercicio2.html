@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <script>
+            function CargarDatos(){
+                var v_numero=prompt("Ingresar numero");
+                document.getElementById("numero").value=v_numero;
+                 if(v_numero%2==0){
+                    document.getElementById("resultado").value="par";
+                 }
+                 else{
+                    document.getElementById("resultado").value="impar";
+                 }
+            }
+        </script>
+</head>
+<body>
+    <form action="" id="Datos"></form>
+    <table>
+        <tr>
+            <td>Ingresar numero:</td>
+            <td><input type="text" id="numero"></td>
+        </tr>
+        <tr>
+            <td>¿Es par o impar?</td>
+            <td><input type="text" id="resultado"></td>
+        </tr>
+    </table>
+    <hr>
+    <button type="button" onclick="CargarDatos()">Cargar datos</button>
+</body>
+</html>

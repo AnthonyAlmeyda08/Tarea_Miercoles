@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function CargarDatos(){
+                var v_año=prompt("Ingresar año de nacimiento");
+                document.getElementById("año").value=v_año;
+                var v_edad=2024-v_año;
+                document.getElementById("resultado").value=v_edad;
+
+        
+            }
+
+        
+    </script>
+</head>
+<body>
+    <form action="" id="Datos"></form>
+    <table>
+        <tr>
+            <td>Ingresar año de nacimiento:</td>
+            <td><input type="text" id="año"></td>
+        </tr>
+        <tr>
+            <td> La edad es :</td>
+            <td><input type="text" id="resultado"></td>
+        </tr>
+    </table>
+    <hr>
+    <button type="button" onclick="CargarDatos()">Cargar datos</button>
+    
+</body>
+</html>

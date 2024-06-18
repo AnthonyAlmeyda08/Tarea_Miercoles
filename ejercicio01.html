@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function CargarDatos(){
+            var v_apellidos=prompt("¿Cuales son tus apellidos?");
+            document.getElementById("apellidos").value=v_apellidos;
+
+            var v_nombres=prompt("¿Cuales son tus nombres?");
+            document.getElementById("nombres").value=v_nombres;
+
+            var v_edad=prompt("¿Cual es tu edad?");
+            document.getElementById("edad").value=v_edad;
+        }
+    </script>
+     <style>
+        body{
+            background-color: rgb(22, 141, 181);
+            color: aliceblue;
+        }
+        .multi{
+            color: aliceblue;
+        }
+        </style>
+</head>
+<body>
+    <form action="" id="datos">
+        <table>
+            <tr>
+                <td>Ingresar los apellidos:</td>
+                <td><input type="text" name="" id="apellidos"></td>
+            </tr>
+            <tr>
+                <td>Ingresar nombres:</td>
+                <td><input type="text" name="" id="nombres"></td>
+            </tr>
+            <tr>
+                <td>Ingresar la edad:</td>
+                <td><input type="text" name="" id="edad"></td>
+            </tr>
+        </table>
+    </form>
+    <hr>
+    <button type="button" onclick="CargarDatos()">Cargar datos</button>
+</body>
+</html>

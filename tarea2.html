@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea2</title>
+    <script>
+        function CargarDatos(){
+            var v_apellidos=prompt("¿Ingresar tu Apellidos?");
+            document.getElementById("apellidos").value=v_apellidos;
+
+            var v_nombres=prompt("¿Cual es tu nombre?");
+            document.getElementById("nombres").value=v_nombres;
+
+            var v_dni=prompt("¿Ingresar tu número de DNI");
+            document.getElementById("dni").value=v_dni;
+
+            var v_resultado=v_apellidos.substring(0,2)+v_nombres.slice(-2)+v_dni;
+            document.getElementById("resultado").value=v_resultado;
+        }
+    </script>
+     <style>
+        body{
+            background-color: rgb(22, 141, 181);
+            background-image: url(https://i.ytimg.com/vi/SKBJ973HlKw/maxresdefault.jpg);
+            color: aliceblue;
+            text-align: center;
+        }
+    
+    button{
+    border: 0;
+    background-image: linear-gradient(150deg, #0fd22f,#09f,#000000,#000000);
+    border-radius: 8px;
+    color: #fff;
+    font-size: 18px;
+    padding: 4px;
+    cursor: pointer;
+    transition: .3s;
+}
+button a{
+    background-color: #71ccf0;
+    padding: 4px 12px;
+    border-radius: 8px;
+    transition: .3s;
+}
+button:hover a{
+    background: none;
+}
+button:active{
+    transform: scale(0.9);
+}
+table{
+    /* Utilizamos los siguientes propiedades para centrar un elemento */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+</style>
+</head>
+<body>
+    <form action="" id="datos">
+        <table >
+            <tr>
+                <td style="color: #109a30;font-size: 24px;"><b>Ingresar apellidos:</b></td>
+                <td><input type="text" name="" id="apellidos"></td>
+            </tr>
+            <tr>
+                <td style="color: #109a30;font-size: 24px;"><b>Ingresar nombres:</b></td>
+                <td><input type="text" name="" id="nombres"></td>
+            </tr>
+            <tr>
+                <td style="color: #109a30; font-size: 24px;";><b>Ingresar DNI:</b></td>
+                <td><input type="text" name="" id="dni"></td>
+            </tr>
+            <tr>
+                <td style="color: #109a30; font-size: 24px;"><b>Codigo generado:</b></td>
+                <td><input type="text" name="" id="resultado"></td>
+            </tr>
+        </table>
+    </form>
+    <hr>
+    <button type="button" onclick="CargarDatos()">Cargar datos</button>
+    <button><a href="tarea1.html" >tarea01</a></button>
+</body>
+</html>
