@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Calendarizacion</title>
+<!-- Usamos styles para diseñar nuestra pagina web -->
+<style>
+    /* en body usamos background para dar color de la pagina web */
+    body{
+        /* Usamos background para darle color de fondo a nuestra pagina */
+        background: rgb(0, 255, 170);
+        /* Tambien podemos usar linear-gradient para combinar colores */
+        /* background: linear-gradient(to right, red,orange, yellow, orange); */
+    }
+    table{
+        /* Utilizamos los siguientes propiedades para centrar un elemento */
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .Horario{
+        padding: 10px;
+    }
+</style>
+</head>
+<body>
+    <div style="display: flex;
+    align-items: center;">
+    <img src="ifv.png" width="100">
+    <h1 style="margin-left: 500px; font-size: 46px;" ><center>Programación</center></h1>
+    </div>
+    <p><B>INICIO: 20/11/2023</B></p>
+    <br>
+    <div style="display: flex; justify-content: space-between;">
+        <h2><B>Grupo: 2/22</B></h2>
+        <h2 style="text-align: center;">Ciclo: IV</h2>
+    </div>
+    <h2><center>DESARROLLO DE SISTEMAS DE INFORMACIÓN</center></h2>
+   <div class="conteiner">
+    <!-- Usamos la etiqueta table para crear ir estructurando la tabla -->
+    <table  border="1"  width="800" height="190" bgcolor="black">
+        <!-- Usamos tr para crear las filas -->
+        <tr style="background-color: rgb(160, 159, 159);">
+            <!-- Usamos th la  -->
+          <th class="Horario"><center>Horario</center></th>
+          <th><center>Lunes</center></th>
+          <th><center>Martes</center></th>
+          <th><center>Miercoles</center></th>
+          <th><center>Jueves</center></th>
+          <th><center>Viernes</center></th>
+        <tr>
+            <td style="background-color: rgb(160, 159, 159);"><center>3:00-3:50</center></td>
+            <td rowspan="3" style="background-color: rgb(175, 209, 125);"><center>Diseño de sistemas</center>
+                <br>
+                <center>(3)</center>
+               <center> Doc.Walter</center>
+            </td>
+            <td rowspan="3" style="background-color: rgb(195, 226, 148);"><center>Administración de redes II</center>
+                <br>
+                <center>(Linux)</center>
+                <center>Doc.Julio Vivanco</center>
+            </td>
+            <td rowspan="3" style="background-color: rgb(195, 226, 148);"><center>Diseño de sitio Web (Html5,
+                javasript y css)</center>
+            <br>
+            <center>Doc.Daniel Camacho</center>
+        </td>
+            <td rowspan="3" style="background-color: rgb(195, 226, 148);"><center>Desarollo de Software con Ado.Net</center>
+                <center>Doc.Cristhian Valle</center>
+            </td>
+            <td rowspan="3" style="background-color: rgb(195, 226, 148);"<center>Trabajo Colaborativo</center>
+            <center>Doc.Antony Galvez</center>
+            </td>
+        </tr>
+        <tr>
+            <td style="background-color: rgb(160, 159, 159);"><center>3:50-4:40</center></td>
+        </tr>
+        <tr>
+            <td style="background-color: rgb(160, 159, 159);"><center>4:40-5:00</center></td>
+        </tr>
+        <tr>
+            <td style="background-color: rgb(160, 159, 159);"><center>4:40-5:00</center></td>
+            <td colspan="5" style="background-color: rgb(160, 159, 159);"><center><b>RECESO</b></center></td>
+        </tr>
+        <tr>
+            <td style="background-color: rgb(160, 159, 159);"><center>5:00-5:50</center></td>
+            <td style="background-color: rgb(160, 159, 159);"></td>
+            <td rowspan="2" style="background-color: rgb(195, 226, 148);"><center>Administración de base de datos II</center>
+            <center>Doc.Glendy Hernandez</center>
+            </td>
+            <td style="background-color: rgb(195, 226, 148);"></td>
+            <td style="background-color: rgb(195, 226, 148);"></td>
+            <td style="background-color: rgb(160, 159, 159);"></td>
+        </tr>
+        <tr>
+            <td style="background-color: rgb(160, 159, 159);"><center>5:50-6:40</center></td>
+            <td style="background-color: rgb(160, 159, 159);"></td>
+            <td style="background-color: rgb(160, 159, 159);"></td>
+            <td style="background-color: rgb(160, 159, 159);"></td>
+            <td style="background-color: rgb(160, 159, 159);"></td>
+
+        </tr>
+    </table>
+   </div>
+</body>
+</html>
