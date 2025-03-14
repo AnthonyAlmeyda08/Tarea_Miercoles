@@ -15,7 +15,7 @@
             display: flex;
             flex-direction: column;
             height: 100vh;
-            background-color: #e8eefb;
+            background-color: #f4f4f9;
             color: #333;
         }
         header {
@@ -48,7 +48,7 @@
         }
         .sidebar {
             width: 250px;
-            background-color: #3664c5;
+            background-color: #1a3a7a; /* Color cambiado */
             color: white;
             padding: 20px;
             position: fixed;
@@ -62,17 +62,30 @@
             padding: 10px;
             border-radius: 5px;
             margin-bottom: 10px;
+            cursor: pointer;
         }
         .sidebar a:hover {
             background-color: #ff6347;
+        }
+        .submenu {
+            display: none;
+            margin-left: 20px;
+        }
+        .submenu a {
+            display: block;
+            padding: 8px;
+            font-size: 0.9em;
+            background-color: #0f2b5a;
+            margin-top: 5px;
+            border-radius: 3px;
+        }
+        .submenu a:hover {
+            background-color: #ff4500;
         }
         .content {
             margin-left: 270px;
             padding: 20px;
             flex-grow: 1;
-            background-color: #ffffff;
-            border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
         }
         .tareas h3 {
             margin-top: 20px;
@@ -106,7 +119,12 @@
     <div class="container">
         <div class="sidebar">
             <h3>Menú</h3>
-            <a href="TareaCalendarizacion.html">📅 Calendarización</a>
+            <a href="#" onclick="toggleSubmenu()">📅 Tareas para la casa</a>
+            <div class="submenu" id="submenuCalendarizacion">
+                <a href="tarea1.html">📆 tarea Nro 1</a>
+                <a href="tarea2.html">📆 tarea Nro 2</a>
+                <a href="Tarea03.html">📆 tarea Nro 3</a>
+            </div>
             <a href="Notas.html">📖 Notas</a>
             <a href="nombre.html">👤 Nombres</a>
         </div>
@@ -125,10 +143,21 @@
                     <li><a href="ejercicio01.html">Ejercicio 1</a></li>
                     <li><a href="ejercicio2.html">Ejercicio 2</a></li>
                     <li><a href="ejercicio3.html">Ejercicio 3</a></li>
-                    <li><a href="ejercicio4.html">Ejercicio 4</a></li>
+                    <li><a href="ejercio4.html">Ejercicio 4</a></li>
                 </ul>
             </div>
         </div>
     </div>
+
+    <script>
+        function toggleSubmenu() {
+            var submenu = document.getElementById("submenuCalendarizacion");
+            if (submenu.style.display === "none" || submenu.style.display === "") {
+                submenu.style.display = "block";
+            } else {
+                submenu.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
