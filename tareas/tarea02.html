@@ -137,6 +137,18 @@
       .tareas a:hover {
         color: #ff6347;
       }
+
+      button {
+  background-color: #2049a2;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px;
+  transition: background 0.3s ease;
+}
       @media (max-width: 768px) {
         .menu-toggle {
           display: block;
@@ -183,7 +195,28 @@
       </div>
 
       <div class="content">
-        
+        <form action="" id="datos">
+            <table >
+                <tr>
+                    <td style="color: #109a30;font-size: 24px;"><b>Ingresar apellidos:</b></td>
+                    <td><input type="text" name="" id="apellidos"></td>
+                </tr>
+                <tr>
+                    <td style="color: #109a30;font-size: 24px;"><b>Ingresar nombres:</b></td>
+                    <td><input type="text" name="" id="nombres"></td>
+                </tr>
+                <tr>
+                    <td style="color: #109a30; font-size: 24px;";><b>Ingresar DNI:</b></td>
+                    <td><input type="text" name="" id="dni"></td>
+                </tr>
+                <tr>
+                    <td style="color: #109a30; font-size: 24px;"><b>Codigo generado:</b></td>
+                    <td><input type="text" name="" id="resultado"></td>
+                </tr>
+            </table>
+        </form>
+        <hr>
+        <button type="button" onclick="CargarDatos()">Cargar datos</button>
       </div>
     </div>
 
@@ -194,6 +227,23 @@
       function toggleSubmenu(id) {
         var submenu = document.getElementById(id);
         submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+      }
+      function CargarDatos() {
+        var v_apellidos = document.getElementById("apellidos").value.trim();
+        var v_nombres = document.getElementById("nombres").value.trim();
+        var v_dni = document.getElementById("dni").value.trim();
+
+        if (v_apellidos === "" || v_nombres === "" || v_dni === "") {
+          alert("Por favor, complete todos los campos.");
+          return;
+        }
+
+        var v_resultado =
+          v_apellidos.substring(0, 2).toUpperCase() +
+          v_nombres.slice(-2).toUpperCase() +
+          v_dni;
+
+        document.getElementById("resultado").value = v_resultado;
       }
     </script>
   </body>
