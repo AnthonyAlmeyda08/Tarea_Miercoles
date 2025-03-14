@@ -1,80 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tarea IV ciclo</title>
+    <title>Dashboard - Tareas IV Ciclo</title>
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-      }
-      body {
-        font-family: "Arial", sans-serif;
-        background-color: #f4f4f9;
-        color: #333;
-      }
-      header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #2049a2;
-        color: #fff;
-        padding: 1em 0;
-      }
-
-      h2 {
-        margin-left: 20px;
-        margin-bottom: 0.5em;
-      }
-
-      nav {
-        padding: 1em;
-        text-align: center;
-      }
-
-      nav a {
-        color: #fff;
-        text-decoration: none;
-        margin: 0 15px;
-        font-size: 1.2em;
-      }
-
-      nav a:hover {
-        color: #ff6347;
-      }
-
-      nav a:active {
-        color: #ff4500;
-      }
-      
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Arial", sans-serif;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            background-color: #e8eefb;
+            color: #333;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #2049a2;
+            color: white;
+            padding: 1em 4em;
+            height: 80px;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2em;
+        }
+        nav a:hover {
+            color: #ff6347;
+        }
+        .container {
+            display: flex;
+            flex-grow: 1;
+            margin-top: 80px;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #3664c5;
+            color: white;
+            padding: 20px;
+            position: fixed;
+            height: 100%;
+            top: 80px;
+        }
+        .sidebar a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .sidebar a:hover {
+            background-color: #ff6347;
+        }
+        .content {
+            margin-left: 270px;
+            padding: 20px;
+            flex-grow: 1;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .tareas h3 {
+            margin-top: 20px;
+            color: #2049a2;
+        }
+        .tareas ul {
+            list-style: none;
+        }
+        .tareas li {
+            margin: 10px 0;
+        }
+        .tareas a {
+            text-decoration: none;
+            color: #2049a2;
+            font-weight: bold;
+        }
+        .tareas a:hover {
+            color: #ff6347;
+        }
     </style>
-  </head>
-  <body>
+</head>
+<body>
     <header>
-      <h2>Tareas IV ciclo</h2>
-      <nav>
-        <a href="TareaCalendarizacion.html">Calendarizacion</a>
-        <a href="Notas.html">Notas</a>
-        <a href="nombre.html">Nombres</a>
-      </nav>
+        <h2>Tareas IV Ciclo</h2>
+        <nav>
+            <a href="TareaCalendarizacion.html">Calendarización</a>
+            <a href="Notas.html">Notas</a>
+            <a href="nombre.html">Nombres</a>
+        </nav>
     </header>
     <div class="container">
-        <!-- <h1>Binevenidos xd</h1>
-        <p>Mis tareas realizadas en el IV ciclo xd</p> -->
-        <div class="tareas">
-            <ul>
-                <h3>Tareas para la casa</h3>
-                <li><a href="tarea1.html">Tarea Nro 1</a></li>
-                <li><a href="tarea2.html">Tarea Nro 2</a></li>
-                <li><a href="Tarea03.html">Tarea Nro 3</a></li>
-                <h3>Ejercicios resueltos en clases</h3>
-                <li><a href="ejercicio01.html">Ejercicio 1</a></li>
-                <li><a href="ejercicio2.html">Ejercicio 2</a></li>
-                <li><a href="ejercicio3.html">Ejercicio 3</a></li>
-                <li><a href="ejercio4.html">Ejercicio 4</a></li>
-            </ul>
+        <div class="sidebar">
+            <h3>Menú</h3>
+            <a href="TareaCalendarizacion.html">📅 Calendarización</a>
+            <a href="Notas.html">📖 Notas</a>
+            <a href="nombre.html">👤 Nombres</a>
+        </div>
+        <div class="content">
+            <h1>Bienvenido al Dashboard</h1>
+            <p>Aquí puedes acceder a todas tus tareas y ejercicios resueltos.</p>
+            <div class="tareas">
+                <h3>📌 Tareas para la Casa</h3>
+                <ul>
+                    <li><a href="tarea1.html">Tarea Nro 1</a></li>
+                    <li><a href="tarea2.html">Tarea Nro 2</a></li>
+                    <li><a href="Tarea03.html">Tarea Nro 3</a></li>
+                </ul>
+                <h3>📚 Ejercicios Resueltos en Clase</h3>
+                <ul>
+                    <li><a href="ejercicio01.html">Ejercicio 1</a></li>
+                    <li><a href="ejercicio2.html">Ejercicio 2</a></li>
+                    <li><a href="ejercicio3.html">Ejercicio 3</a></li>
+                    <li><a href="ejercicio4.html">Ejercicio 4</a></li>
+                </ul>
+            </div>
         </div>
     </div>
-  </body>
+</body>
 </html>
