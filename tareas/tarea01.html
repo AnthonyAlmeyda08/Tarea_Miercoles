@@ -259,18 +259,19 @@ button:hover {
             submenu.style.display = submenu.style.display === "block" ? "none" : "block";
         }
         function CargarDatos() {
-            var numero = prompt("Ingrese un número");
-            if (!isNaN(numero) && numero !== null) {
-                document.getElementById("Numero").value = numero;
-                let contenido = "<h2>Tabla de " + numero + "</h2>";
-                for (let i = 0; i <= 12; i++) {
-                    contenido += `${numero} × ${i} = ${numero * i}<br>`;
-                }
-                document.getElementById('multi').innerHTML = contenido;
-            } else {
-                alert("Ingrese un número válido.");
-            }
+    var numero = document.getElementById("Numero").value; // Obtener el valor del input
+    
+    if (!isNaN(numero) && numero.trim() !== "") { // Validar que sea un número
+        let contenido = "<h2>Tabla de " + numero + "</h2>";
+        for (let i = 0; i <= 12; i++) {
+            contenido += `${numero} × ${i} = ${numero * i}<br>`;
         }
+        document.getElementById('multi').innerHTML = contenido;
+    } else {
+        alert("Ingrese un número válido.");
+    }
+}
+
     </script>
   </body>
 </html>
