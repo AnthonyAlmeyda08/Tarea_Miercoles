@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #eef2f3;
+  color: #333;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Cabecera */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2049a2;
+  color: white;
+  padding: 1em 2em;
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header a {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+header a:hover,
+header a:focus {
+  color: #f1e77c;
+  outline: 2px solid #f1e77c;
+}
+
+/* Menú de navegación */
+.menu-toggle {
+  font-size: 1.5em;
+  cursor: pointer;
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 1.2em;
+  transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav a:focus {
+  color: #ff6347;
+  outline: 2px solid #ff6347;
+}
+
+/* Contenedor principal */
+.container {
+  display: flex;
+  flex-grow: 1;
+  margin-top: 80px;
+}
+
+/* Barra lateral */
+.sidebar {
+  width: 250px;
+  background-color: #1a3a7a;
+  color: white;
+  padding: 20px;
+  height: calc(100vh - 80px);
+  position: fixed;
+  top: 80px;
+  left: 0;
+  transition: transform 0.3s ease-in-out;
+}
+
+.sidebar a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 12px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar a:hover,
+.sidebar a:focus {
+  background-color: #ff6347;
+  outline: 2px solid #ff6347;
+}
+
+/* Submenús */
+.submenu {
+  display: none;
+  margin-left: 20px;
+}
+
+.submenu a {
+  font-size: 0.95em;
+  padding: 8px;
+  background-color: #0f2b5a;
+  margin-top: 5px;
+  border-radius: 3px;
+}
+
+.submenu a:hover,
+.submenu a:focus {
+  background-color: #ff4500;
+  outline: 2px solid #ff4500;
+}
+
+/* Contenido */
+.content {
+  margin-left: 270px;
+  padding: 30px;
+  flex-grow: 1;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+h1 {
+  font-size: 2em;
+  color: #2049a2;
+  margin-bottom: 10px;
+}
+
+.tareas {
+  margin-top: 20px;
+}
+
+.tareas h3 {
+  color: #2049a2;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.tareas ul {
+  list-style: none;
+}
+
+.tareas li {
+  margin: 10px 0;
+}
+
+.tareas a {
+  text-decoration: none;
+  color: #2049a2;
+  font-weight: bold;
+  font-size: 1.1em;
+  transition: color 0.3s ease;
+}
+
+.tareas a:hover,
+.tareas a:focus {
+  color: #ff6347;
+  outline: 2px solid #ff6347;
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .sidebar {
+    transform: translateX(-100%);
+  }
+
+  .sidebar.active {
+    transform: translateX(0);
+  }
+
+  .content {
+    margin-left: 0;
+  }
+}
