@@ -20,18 +20,14 @@
     <div class="container">
       <div class="sidebar" id="sidebar">
         <a href="../index.html">Menu</a>
-        <a href="#" onclick="toggleSubmenu('submenuTareas')"
-          >📅 Tareas para la casa</a
-        >
+        <a href="#" onclick="toggleSubmenu('submenuTareas')">📅 Tareas para la casa</a>
         <div class="submenu" id="submenuTareas">
           <a href="../tareas/tarea01.html">Tabla de multiplicar</a>
           <a href="../tareas/tarea02.html">Codigo generado</a>
           <a href="../tareas/tarea03.html">Lista Ordenada</a>
           <a href="../tareas/tarea04.html">Lista desordenada</a>
         </div>
-        <a href="#" onclick="toggleSubmenu('submenuEjercicios')"
-          >📖 Ejercicios</a
-        >
+        <a href="#" onclick="toggleSubmenu('submenuEjercicios')">📖 Ejercicios</a>
         <div class="submenu" id="submenuEjercicios">
           <a href="ejercicio1.html"> Numero par o impar</a>
           <a href="ejercicio2.html"> Numero positivo o negativo</a>
@@ -49,11 +45,11 @@
           </tr>
           <tr>
             <td>¿Es Positivo o Negativo?</td>
-            <td><input type="text" id="resultado" /></td>
+            <td><input type="text" id="resultado" readonly /></td>
           </tr>
         </table>
         <hr />
-        <button type="button" onclick="CargarDatos()">Cargar datos</button>
+        <button type="button" onclick="CargarDatos()">Verificar</button>
       </div>
     </div>
 
@@ -63,16 +59,15 @@
       }
       function toggleSubmenu(id) {
         var submenu = document.getElementById(id);
-        submenu.style.display =
-          submenu.style.display === "block" ? "none" : "block";
+        submenu.style.display = submenu.style.display === "block" ? "none" : "block";
       }
       function CargarDatos() {
-        var v_numero = prompt("Ingresar numero");
-        document.getElementById("numero").value = v_numero;
-        if (v_numero > 0) {
-          document.getElementById("resultado").value = "positivo";
+        var v_numero = document.getElementById("numero").value;
+        if (!isNaN(v_numero) && v_numero.trim() !== "") {
+          v_numero = parseFloat(v_numero);
+          document.getElementById("resultado").value = v_numero > 0 ? "Positivo" : "Negativo";
         } else {
-          document.getElementById("resultado").value = "Negativo";
+          document.getElementById("resultado").value = "Ingrese un número válido";
         }
       }
     </script>

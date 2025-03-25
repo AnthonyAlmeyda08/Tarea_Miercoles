@@ -20,18 +20,14 @@
     <div class="container">
       <div class="sidebar" id="sidebar">
         <a href="../index.html">Menu</a>
-        <a href="#" onclick="toggleSubmenu('submenuTareas')"
-          >📅 Tareas para la casa</a
-        >
+        <a href="#" onclick="toggleSubmenu('submenuTareas')">📅 Tareas para la casa</a>
         <div class="submenu" id="submenuTareas">
           <a href="../tareas/tarea01.html">Tabla de multiplicar</a>
           <a href="../tareas/tarea02.html">Codigo generado</a>
           <a href="../tareas/tarea03.html">Lista Ordenada</a>
           <a href="../tareas/tarea04.html">Lista desordenada</a>
         </div>
-        <a href="#" onclick="toggleSubmenu('submenuEjercicios')"
-          >📖 Ejercicios</a
-        >
+        <a href="#" onclick="toggleSubmenu('submenuEjercicios')">📖 Ejercicios</a>
         <div class="submenu" id="submenuEjercicios">
           <a href="ejercicio1.html"> Numero par o impar</a>
           <a href="ejercicio2.html"> Numero positivo o negativo</a>
@@ -41,19 +37,20 @@
       </div>
 
       <div class="content">
-        <form action="" id="Datos"></form>
-        <table>
-          <tr>
-            <td>Ingresar numero:</td>
-            <td><input type="text" id="numero" /></td>
-          </tr>
-          <tr>
-            <td>¿Es par o impar?</td>
-            <td><input type="text" id="resultado" /></td>
-          </tr>
-        </table>
-        <hr />
-        <button type="button" onclick="CargarDatos()">Cargar datos</button>
+        <form id="Datos" onsubmit="return verificarNumero(event)">
+          <table>
+            <tr>
+              <td>Ingresar número:</td>
+              <td><input type="number" id="numero" required /></td>
+            </tr>
+            <tr>
+              <td>¿Es par o impar?</td>
+              <td><input type="text" id="resultado" readonly /></td>
+            </tr>
+          </table>
+          <hr />
+          <button type="submit">Verificar</button>
+        </form>
       </div>
     </div>
 
@@ -61,18 +58,26 @@
       function toggleSidebar() {
         document.getElementById("sidebar").classList.toggle("active");
       }
+
       function toggleSubmenu(id) {
         var submenu = document.getElementById(id);
-        submenu.style.display =
-          submenu.style.display === "block" ? "none" : "block";
+        submenu.style.display = submenu.style.display === "block" ? "none" : "block";
       }
-      function CargarDatos() {
-        var v_numero = prompt("Ingresar numero");
-        document.getElementById("numero").value = v_numero;
+
+      function verificarNumero(event) {
+        event.preventDefault(); // Evita que el formulario se recargue
+        var v_numero = document.getElementById("numero").value;
+        var resultado = document.getElementById("resultado");
+
+        if (v_numero === "") {
+          resultado.value = "Ingrese un número";
+          return;
+        }
+        
         if (v_numero % 2 == 0) {
-          document.getElementById("resultado").value = "par";
+          resultado.value = "Par";
         } else {
-          document.getElementById("resultado").value = "impar";
+          resultado.value = "Impar";
         }
       }
     </script>
