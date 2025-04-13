@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard - Tareas IV Ciclo</title>
-  <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/styles.css" />
   </head>
   <body>
     <header>
-        <a href="../index.html">Tarea IV Ciclo</a>
+      <a href="../index.html">Tarea IV Ciclo</a>
       <span class="menu-toggle" onclick="toggleSidebar()">☰</span>
       <nav>
         <a href="../TareaCalendarizacion.html">Calendarización</a>
@@ -20,17 +20,23 @@
     <div class="container">
       <div class="sidebar" id="sidebar">
         <a href="../index.html">Menu</a>
-        <a href="#" onclick="toggleSubmenu('submenuTareas')">📅 Tareas para la casa</a>
+        <a href="#" onclick="toggleSubmenu('submenuTareas')"
+          >📅 Tareas para la casa</a
+        >
         <div class="submenu" id="submenuTareas">
           <a href="tarea01.html">Tabla de multiplicar</a>
           <a href="tarea02.html">Codigo generado</a>
           <a href="tarea03.html">Lista Ordenada</a>
           <a href="tarea04.html">Lista desordenada</a>
         </div>
-        <a href="#" onclick="toggleSubmenu('submenuEjercicios')">📖 Ejercicios</a>
+        <a href="#" onclick="toggleSubmenu('submenuEjercicios')"
+          >📖 Ejercicios</a
+        >
         <div class="submenu" id="submenuEjercicios">
           <a href="../ejercicios/ejercicio1.html"> Numero par o impar</a>
-          <a href="../ejercicios/ejercicio2.html"> Numero positivo o negativo</a>
+          <a href="../ejercicios/ejercicio2.html">
+            Numero positivo o negativo</a
+          >
           <a href="../ejercicios/ejercicio3.html">Calcular edad</a>
         </div>
         <a href="nombre.html">👤 Nombres</a>
@@ -38,26 +44,34 @@
 
       <div class="content">
         <form action="" id="datos">
-            <table >
-                <tr>
-                    <td style="color: #109a30;font-size: 24px;"><b>Ingresar apellidos:</b></td>
-                    <td><input type="text" name="" id="apellidos"></td>
-                </tr>
-                <tr>
-                    <td style="color: #109a30;font-size: 24px;"><b>Ingresar nombres:</b></td>
-                    <td><input type="text" name="" id="nombres"></td>
-                </tr>
-                <tr>
-                    <td style="color: #109a30; font-size: 24px;";><b>Ingresar DNI:</b></td>
-                    <td><input type="text" name="" id="dni"></td>
-                </tr>
-                <tr>
-                    <td style="color: #109a30; font-size: 24px;"><b>Codigo generado:</b></td>
-                    <td><input type="text" name="" id="resultado"></td>
-                </tr>
-            </table>
+          <table>
+            <tr>
+              <td style="color: #109a30; font-size: 24px">
+                <b>Ingresar apellidos:</b>
+              </td>
+              <td><input type="text" name="" id="apellidos" /></td>
+            </tr>
+            <tr>
+              <td style="color: #109a30; font-size: 24px">
+                <b>Ingresar nombres:</b>
+              </td>
+              <td><input type="text" name="" id="nombres" /></td>
+            </tr>
+            <tr>
+              <td style="color: #109a30; font-size: 24px" ;>
+                <b>Ingresar DNI:</b>
+              </td>
+              <td><input type="text" name="" id="dni" /></td>
+            </tr>
+            <tr>
+              <td style="color: #109a30; font-size: 24px">
+                <b>Codigo generado:</b>
+              </td>
+              <td><input type="text" name="" id="resultado" /></td>
+            </tr>
+          </table>
         </form>
-        <hr>
+        <hr />
         <button type="button" onclick="CargarDatos()">Cargar datos</button>
       </div>
     </div>
@@ -68,7 +82,8 @@
       }
       function toggleSubmenu(id) {
         var submenu = document.getElementById(id);
-        submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+        submenu.style.display =
+          submenu.style.display === "block" ? "none" : "block";
       }
       function CargarDatos() {
         var v_apellidos = document.getElementById("apellidos").value.trim();

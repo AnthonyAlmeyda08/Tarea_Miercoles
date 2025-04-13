@@ -20,14 +20,18 @@
     <div class="container">
       <div class="sidebar" id="sidebar">
         <a href="../index.html">Menu</a>
-        <a href="#" onclick="toggleSubmenu('submenuTareas')">📅 Tareas para la casa</a>
+        <a href="#" onclick="toggleSubmenu('submenuTareas')"
+          >📅 Tareas para la casa</a
+        >
         <div class="submenu" id="submenuTareas">
           <a href="../tareas/tarea01.html">Tabla de multiplicar</a>
           <a href="../tareas/tarea02.html">Codigo generado</a>
           <a href="../tareas/tarea03.html">Lista Ordenada</a>
           <a href="../tareas/tarea04.html">Lista desordenada</a>
         </div>
-        <a href="#" onclick="toggleSubmenu('submenuEjercicios')">📖 Ejercicios</a>
+        <a href="#" onclick="toggleSubmenu('submenuEjercicios')"
+          >📖 Ejercicios</a
+        >
         <div class="submenu" id="submenuEjercicios">
           <a href="ejercicio1.html"> Numero par o impar</a>
           <a href="ejercicio2.html"> Numero positivo o negativo</a>
@@ -61,7 +65,8 @@
 
       function toggleSubmenu(id) {
         var submenu = document.getElementById(id);
-        submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+        submenu.style.display =
+          submenu.style.display === "block" ? "none" : "block";
       }
 
       function verificarNumero(event) {
@@ -73,7 +78,7 @@
           resultado.value = "Ingrese un número";
           return;
         }
-        
+
         if (v_numero % 2 == 0) {
           resultado.value = "Par";
         } else {
