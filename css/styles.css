@@ -192,3 +192,45 @@ h1 {
     margin-left: 0;
   }
 }
+
+.tablamulti{
+  background-color: #0f2b5a;
+  color: #fff;
+  width: 100px;
+  height: 25px;
+  border: none;
+  border-radius:5px;
+  margin-bottom: 5px;
+  border-bottom: 2px solid #7cf1e9;
+}
+.tablamulti:hover{
+  background-color: #27c4e0;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  border-left: 2px solid #000;
+  border-right: 2px solid #000;
+}
+.btnejercicio{
+  background-color: #137d76;
+  color: #fff;
+  width: 100px;
+  height: 25px;
+  border: none;
+  margin-top:5px;
+  border-radius: 5px;
+}
+.btnejercicio:hover{
+  background-color: #dfe2d4;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+
+}
+.resultado{
+  border: none;
+  border-bottom: #000 solid 2px;
+  border-radius: 5px;
+}
